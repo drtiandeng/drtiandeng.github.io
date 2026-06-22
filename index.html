@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tian Deng | The Chinese University of Hong Kong, Shenzhen</title>
+<meta name="description" content="Tian Deng is an Assistant Professor of Accounting at The Chinese University of Hong Kong, Shenzhen.">
+<meta name="keywords" content="Tian Deng, accounting, CUHK Shenzhen, disclosure, executive compensation, earnings forecasts, digitalization">
+<meta property="og:title" content="Tian Deng | CUHK Shenzhen">
+<meta property="og:description" content="Assistant Professor of Accounting at The Chinese University of Hong Kong, Shenzhen.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1e21;
+    --muted:#5b6168;
+    --accent:#8b1a1a;       /* deep crimson */
+    --accent-soft:#a83232;
+    --line:#e7e3dd;
+    --bg:#ffffff;
+    --card:#faf8f5;
+    --max:920px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;color:var(--ink);background:var(--bg);
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---- Top nav ---- */
+  .nav{
+    position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--max);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .brand{font-weight:700;letter-spacing:.2px;color:var(--ink)}
+  .brand:hover{text-decoration:none;color:var(--accent)}
+  .nav-links{display:flex;gap:22px;flex-wrap:wrap}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:15px}
+  .nav-links a:hover{color:var(--accent);text-decoration:none}
+
+  /* ---- Layout ---- */
+  main{max-width:var(--max);margin:0 auto;padding:0 24px}
+  section{padding:46px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  h2{
+    font-family:"Lora",Georgia,serif;font-size:1.5rem;font-weight:600;
+    margin:0 0 22px;color:var(--ink);position:relative;padding-bottom:8px;
+  }
+  h2::after{content:"";position:absolute;left:0;bottom:0;width:46px;height:3px;background:var(--accent);border-radius:2px}
+
+  /* ---- Hero ---- */
+  .hero{display:flex;gap:38px;align-items:center;padding:54px 0 46px;flex-wrap:wrap}
+  .avatar{
+    width:172px;height:172px;border-radius:50%;flex:0 0 auto;
+    background:linear-gradient(135deg,#8b1a1a,#c2613f);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:"Lora",serif;font-size:58px;font-weight:600;
+    box-shadow:0 8px 28px rgba(139,26,26,.22);user-select:none;
+  }
+  .avatar-img{
+    width:172px;height:172px;border-radius:50%;flex:0 0 auto;object-fit:cover;
+    box-shadow:0 8px 28px rgba(28,30,33,.22);
+  }
+  .hero-text{flex:1;min-width:260px}
+  .hero-text h1{font-family:"Lora",serif;font-size:2.3rem;margin:0 0 6px;line-height:1.1}
+  .role{color:var(--muted);margin:2px 0;font-size:1.02rem}
+  .role strong{color:var(--ink);font-weight:600}
+  .links{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+  .links a{
+    display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;
+    color:var(--accent);border:1px solid var(--line);background:var(--card);
+    padding:7px 13px;border-radius:999px;
+  }
+  .links a:hover{text-decoration:none;border-color:var(--accent);background:#fff}
+
+  /* ---- Content blocks ---- */
+  p{margin:0 0 14px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+  .tag{background:var(--card);border:1px solid var(--line);color:var(--muted);
+    padding:4px 11px;border-radius:999px;font-size:13.5px;font-weight:500}
+
+  .entry{margin-bottom:20px}
+  .entry .title{font-weight:600}
+  .entry .meta{color:var(--muted);font-size:14.5px}
+  .venue{font-style:italic;color:var(--accent-soft)}
+  .status{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.3px;
+    text-transform:uppercase;color:#7a5c10;background:#fbf1d3;border:1px solid #f0e2b0;
+    padding:1px 8px;border-radius:6px;margin-right:6px;vertical-align:middle}
+
+  .timeline{list-style:none;margin:0;padding:0}
+  .timeline li{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px dashed var(--line)}
+  .timeline li:last-child{border-bottom:none}
+  .timeline .when{color:var(--muted);font-size:14.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media(max-width:680px){.two-col{grid-template-columns:1fr;gap:8px}}
+  .sub{font-weight:600;margin:0 0 8px;color:var(--ink);font-size:1.02rem}
+
+  footer{max-width:var(--max);margin:0 auto;padding:30px 24px 60px;color:var(--muted);font-size:13.5px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Tian Deng</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img class="avatar-img" src="https://myweb.cuhk.edu.cn/Content/Photo/img_37501.jpg" alt="Tian Deng"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <div class="avatar" aria-label="Tian Deng" style="display:none">TD</div>
+    <div class="hero-text">
+      <h1>Tian Deng</h1>
+      <p class="role"><strong>Assistant Professor of Accounting</strong></p>
+      <p class="role">School of Management and Economics</p>
+      <p class="role">The Chinese University of Hong Kong, Shenzhen</p>
+      <p class="role">dengtian (at) cuhk.edu.cn</p>
+      <div class="links">
+        <a href="mailto:dengtian@cuhk.edu.cn">Email</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Welcome! I am an Assistant Professor of Accounting at the
+      School of Management and Economics,
+      The Chinese University of Hong Kong, Shenzhen.</p>
+    <p>I earned my Ph.D. in Accounting from
+      Singapore Management University
+      in 2023, and my B.A. in Accounting from
+      Wuhan University in 2017.</p>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="entry">
+      <div class="title">Anonymous Earnings Forecasts</div>
+      <div class="meta">with Qiang Cheng, An-Ping Lin, and Sterling Huang</div>
+      <div class="meta"><span class="venue">Review of Accounting Studies</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="title">Does Tax Deductibility Affect Executive Compensation? Evidence from Obamacare</div>
+      <div class="meta">with Sterling Huang and Liandong Zhang</div>
+      <div class="meta"><span class="venue">Journal of the American Taxation Association</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="title">Digitalization and Accounting Jobs</div>
+      <div class="meta">with Amanda Aw Yong, Qiang Cheng, and Rencheng Wang</div>
+      <div class="meta"><span class="status">Revise &amp; Resubmit</span></div>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p class="sub">The Chinese University of Hong Kong, Shenzhen</p>
+    <div class="entry">
+      <div class="title">Intermediate Financial Accounting</div>
+      <div class="meta">Fall 2023, Spring 2024, Spring 2025, Spring 2026 &nbsp;&middot;&nbsp; Teaching rating: 6 / 6</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; <span id="yr"></span> Tian Deng. Built as a static page &mdash; host it free on GitHub Pages.
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
