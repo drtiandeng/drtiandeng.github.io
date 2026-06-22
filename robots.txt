@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drtiandeng.github.io/sitemap.xml
